@@ -1,0 +1,5 @@
+h1 Con Listing
+
+= each con in controller
+  h2= con.name
+  | {{{con.description}}}
