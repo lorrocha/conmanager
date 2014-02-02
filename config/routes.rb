@@ -4,6 +4,13 @@ Conmanager::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
+  root to: 'home#index'
+
+  namespace :api do
+    namespace :v1 do
+        resources :cons, only: :index
+    end
+  end
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
